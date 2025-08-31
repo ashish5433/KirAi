@@ -23,8 +23,8 @@ export const CartProvider = ({ children }) => {
         setCart(cartItems);
         
         // Calculate the total count of items in the cart
-        const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-        setCartCount(totalCount);
+        const total = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+        setCartCount(total);
       });
 
       return () => unsubscribe();

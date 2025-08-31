@@ -1,4 +1,4 @@
 
 export default function handler(req, res) {
-  res.status(200).json({ name: 'Ashish Bhardwaj' })
+ return res.status(200).json({ name: 'Ashish Bhardwaj' })
 }

@@ -13,12 +13,13 @@ import Listings from './Options/Listings';
 
 
 
-// Draw the chart and set the chart values
+
 
 
 export default function Dashboard() {
   const [showOption,setShowOption] = useState("Home");
   const [dashoption,setDashOption] = useState(true);
+  const [show,SetShow]=useState(0)
   return (
     <div>
       <Navdash dashoption={dashoption} setDashOption={setDashOption}/>
