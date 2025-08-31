@@ -52,7 +52,7 @@ export default function LamborghiniProductPage({ data }) {
     } else {
       await setDoc(productRef, {
         productName: "Lamborghini Aventador",
-        productOwner: "Milind Palaria",
+        productOwner: "ashish bhardwaj",
         productPrice: 19999,
         quantity: 1,
       });

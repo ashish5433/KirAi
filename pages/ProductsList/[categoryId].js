@@ -261,7 +261,7 @@ export default function ProductsList() {
 
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   );

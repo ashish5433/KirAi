@@ -28,8 +28,6 @@ const checkEmailExistence = async (email) => {
         //   console.log(response)
 
         // console.log(response.data.status)
-        // Check if email exists based on ZeroBounce API response
-        return response.data.status === "valid";
     } catch (error) {
         // console.log("Error checking email existence:", error);
         return false;

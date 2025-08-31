@@ -9,7 +9,7 @@ export default function ProductCard({ products , view}) {
   return (
     <div >
       <div className={view ? "product-card-div-row" : "product-card-div-col"}>
-        {products?.map((data) => (
+        {products?.map((data,key) => (
           <ProductCardContent data={data} view={view}/>
         ))}
       </div>

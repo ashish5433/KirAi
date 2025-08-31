@@ -16,7 +16,7 @@ export default function estate_ProductPage2({data}) {
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
   const createData=async()=>{
-    await addDoc(orders,{ProductName:"Eiffel 2BHK Apartments", Seller:"Rishav Kumar",price:43000,Time:showTime,Date:datenow})
+    await addDoc(orders,{ProductName:"Eiffel 2BHK Apartments", Seller:"Ashish",price:43000,Time:showTime,Date:datenow})
     // alert("Rented Successfully")
   }
   // console.log(data);
@@ -32,7 +32,7 @@ export default function estate_ProductPage2({data}) {
       </div> */}
       <div className={classes.first}>
         <h1>Eiffel 2BHK Apartments</h1>
-        <h3>~ Rishav Kumar</h3>
+        <h3>~ Ashish</h3>
         <div>
           <div className={classes.big_image_div}>
             {/* <div className={classes.share_and_like}>
@@ -98,7 +98,7 @@ export default function estate_ProductPage2({data}) {
           </div>
           <div className={classes.price_and_others}>
             <h1>
-              <span>&#8377; </span> 43,000 . 00 /month
+              <span>&#8377; </span> 430,000.00 /month
             </h1>
             <div className={classes.currencies}>
               <p>inr</p>
@@ -192,7 +192,7 @@ export default function estate_ProductPage2({data}) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Rishav Kumar</h1>
+              <h1>Ashish</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image

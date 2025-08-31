@@ -102,8 +102,8 @@ The application will be running on `http://localhost:3000`.
 We would like to thank the following contributors for their efforts and contributions to the Kir.AI project:
 
 - [Ashish Bhardwaj](https://github.com/ashish5433)
-- [Harsh Kanojia](https://github.com/Eyesnatcher-coder)
-- [Rishav Kumar](https://github.com/RockingRishav)
+- [Ashish Bhardwaj](https://github.com/Eyesnatcher-coder)
+- [Ashish](https://github.com/RockingRishav)
 
 ## 🚀 Contributing 🚀
 
@@ -127,9 +127,9 @@ This project is licensed under the MIT License - see the [LICENSE](/License) fil
 
 For any inquiries or feedback, please contact us at:
 
-- **Email**: palaria23@gmail.com
+- **Email**: bhardwaj23@gmail.com
 - **Website**: [www.kir.ai](kirai.vercel.app)
-- **GitHub**: [Kir.AI Repository](https://github.com/Milind-Palaria/kir.ai)
+- **GitHub**: [Kir.AI Repository](https://github.com/ashish-bhardwaj/kir.ai)
 
 ---
 

@@ -16,13 +16,13 @@ export default function bike_ProductPage2({ data }) {
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
   const createData = async () => {
-    await addDoc(orders, { ProductName: "Suzuki Hayabusa", Seller: "Milind Palaria", price: 4500, Time: showTime, Date: datenow })
+    await addDoc(orders, { ProductName: "Suzuki Hayabusa", Seller: "ashish bhardwaj", price: 4500, Time: showTime, Date: datenow })
     // alert("Rented Successfully")
   }
   // console.log(data);
   const router = useRouter();
   const pusher = () => {
-    router.push("/components/History");
+    router.push("/pages/History");
   }
   return (
     <div>
@@ -32,7 +32,7 @@ export default function bike_ProductPage2({ data }) {
       </div> */}
       <div className={classes.first}>
         <h1>Suzuki Hayabusa</h1>
-        <h3>~ Milind Palaria</h3>
+        <h3>~ ashish bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
             {/* <div className={classes.share_and_like}>
@@ -191,7 +191,7 @@ export default function bike_ProductPage2({ data }) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Milind Palaria</h1>
+              <h1>ashish bhardwaj</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image

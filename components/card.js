@@ -54,7 +54,6 @@ const plotpusher=()=>{
   //   //   setYess(false);
   //   // }, 800);
 
-  //   // console.log("sexxxxxxxxxxxxxxxxxxxxxx");
   // }, [ouliner.outline]);
   return (
     <div>

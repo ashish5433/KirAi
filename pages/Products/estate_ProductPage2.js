@@ -32,8 +32,8 @@ export default function estate_ProductPage2({ data }) {
     } else {
       await setDoc(productRef, {
         productName: "Eiffel 2BHK Apartments",
-        productOwner: "Rishav Kumar",
-        productPrice: 43000,
+        productOwner: "Ashish",
+        productPrice: 430000,
         quantity: 1,
       });
     }
@@ -53,7 +53,7 @@ export default function estate_ProductPage2({ data }) {
     <div>
       <div className={classes.first}>
         <h1>Eiffel 2BHK Apartments</h1>
-        <h3>~ Rishav Kumar</h3>
+        <h3>~ Ashish</h3>
         <div>
           <div className={classes.big_image_div}>
             {/* Big image display */}
@@ -199,7 +199,7 @@ export default function estate_ProductPage2({ data }) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Rishav Kumar</h1>
+              <h1>Ashish</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image

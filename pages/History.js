@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Unica_One, Bebas_Neue } from "next/font/google";
 
-import classes from "../../styles/history.module.css"
-import Navbar2 from './navbar2'
+import classes from "@/styles/history.module.css"
+import Navbar2 from '@/components/navbar2'
 import { db, storage } from '@/firebase/firebase'
 import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 const player = Bebas_Neue({

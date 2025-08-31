@@ -11,9 +11,17 @@ import { useAuth } from "@/contexts/AuthContext";
 
 export default function bike_ProductPage2({ data }) {
   const { user } = useAuth();
-  
-  // State to store the current big image source
   const [bigImageSrc, setBigImageSrc] = useState("/bikecarousel4.jpg");
+
+  // Currency state
+  const [selectedCurrency, setSelectedCurrency] = useState("inr");
+  const conversionRates = {
+    inr: 1,
+    usd: 0.012,
+    eur: 0.011,
+  };
+  const priceInINR = 4500;
+  const convertedPrice = (priceInINR * conversionRates[selectedCurrency]).toFixed(2);
 
   const addToCart = async () => {
     if (!user) {
@@ -32,7 +40,7 @@ export default function bike_ProductPage2({ data }) {
     } else {
       await setDoc(productRef, {
         productName: "Suzuki Hayabusa",
-        productOwner: "Milind Palaria",
+        productOwner: "ashish bhardwaj",
         productPrice: 4500,
         quantity: 1,
       });
@@ -44,215 +52,129 @@ export default function bike_ProductPage2({ data }) {
     router.push("/components/History");
   };
 
-  // Function to handle small image click
   const handleImageClick = (src) => {
-    setBigImageSrc(src); // Update the big image source
+    setBigImageSrc(src);
   };
 
   return (
     <div>
       <div className={classes.first}>
         <h1>Suzuki Hayabusa</h1>
-        <h3>~ Milind Palaria</h3>
+        <h3>~ ashish bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
             <Image
               className={classes.big_image}
-              src={bigImageSrc} // Use the big image source from state
+              src={bigImageSrc}
               width={1920}
               height={1080}
               alt="Main Product"
             />
             <div className={classes.overlay_big}></div>
             <div className={classes.small_image_div}>
-              {/* Clicking on small images will change the big image */}
-              <Image
-                className={classes.small_image}
-                src="/bikecarousel3.jpg"
-                width={1920}
-                height={1080}
-                alt="Small Product Image"
-                onClick={() => handleImageClick("/bikecarousel3.jpg")}
-              />
-              <Image
-                className={classes.small_image}
-                src="/bikecarousel5.jpg"
-                width={1920}
-                height={1080}
-                alt="Small Product Image"
-                onClick={() => handleImageClick("/bikecarousel5.jpg")}
-              />
-              <Image
-                className={classes.small_image}
-                src="/bikecarousel7.jpg"
-                width={1920}
-                height={1080}
-                alt="Small Product Image"
-                onClick={() => handleImageClick("/bikecarousel7.jpg")}
-              />
-              <Image
-                className={classes.small_image}
-                src="/bikecarousel6.jpg"
-                width={1920}
-                height={1080}
-                alt="Small Product Image"
-                onClick={() => handleImageClick("/bikecarousel6.jpg")}
-              />
-              <div className={classes.more_div}>
-                <h3>more photos</h3>
-              </div>
+              <Image className={classes.small_image} src="/bikecarousel3.jpg" width={1920} height={1080} alt="Small Product" onClick={() => handleImageClick("/bikecarousel3.jpg")} />
+              <Image className={classes.small_image} src="/bikecarousel5.jpg" width={1920} height={1080} alt="Small Product" onClick={() => handleImageClick("/bikecarousel5.jpg")} />
+              <Image className={classes.small_image} src="/bikecarousel7.jpg" width={1920} height={1080} alt="Small Product" onClick={() => handleImageClick("/bikecarousel7.jpg")} />
+              <Image className={classes.small_image} src="/bikecarousel6.jpg" width={1920} height={1080} alt="Small Product" onClick={() => handleImageClick("/bikecarousel6.jpg")} />
+              <div className={classes.more_div}><h3>more photos</h3></div>
             </div>
           </div>
+
           <div className={classes.price_and_others}>
             <h1>
-              <span>&#8377; </span> 4,500 . 00 /day
+              <span>
+                {selectedCurrency === "inr" ? "₹" : selectedCurrency === "usd" ? "$" : "€"}{" "}
+              </span>
+              {convertedPrice} /day
             </h1>
+
             <div className={classes.currencies}>
-              <p>inr</p>
-              <p>usd</p>
-              <p>eur</p>
+              {["inr", "usd", "eur"].map((curr) => (
+                <p
+                  key={curr}
+                  onClick={() => setSelectedCurrency(curr)}
+                  style={{
+                    cursor: "pointer",
+                    fontWeight: selectedCurrency === curr ? "bold" : "normal",
+                    textDecoration: selectedCurrency === curr ? "underline" : "none",
+                  }}
+                >
+                  {curr}
+                </p>
+              ))}
             </div>
+
             <button onClick={addToCart}>rent now</button>
             <button onClick={pusher}>View History</button>
             <h3>add to wishlist</h3>
+
+            {/* Icons Section with Links */}
             <div className={classes.icons2_div}>
-              <div>
-                <Image
-                  className={classes.icons2}
-                  src="/location-svgrepo-com.svg"
-                  width={50}
-                  height={50}
-                  alt="small icons"
-                />
+              <div onClick={() => window.open("https://www.google.com/maps?q=Chennai", "_blank")} style={{ cursor: "pointer" }}>
+                <Image className={classes.icons2} src="/location-svgrepo-com.svg" width={50} height={50} alt="map" />
                 <p>visit</p>
               </div>
               <div>
-                <Image
-                  className={classes.icons2}
-                  src="/call-phone-heart-svgrepo-com.svg"
-                  width={50}
-                  height={50}
-                  alt="small icons"
-                />
-                <p>call</p>
+                <a href="tel:+918690585728" style={{ textDecoration: "none", color: "inherit" }}>
+                  <Image className={classes.icons2} src="/call-phone-heart-svgrepo-com.svg" width={50} height={50} alt="call" />
+                  <p>call</p>
+                </a>
               </div>
               <div>
-                <Image
-                  className={classes.icons2}
-                  src="/chat-svgrepo-com.svg"
-                  width={50}
-                  height={50}
-                  alt="small icons"
-                />
-                <p>chat</p>
+                <a href="https://wa.me/918690585728" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+                  <Image className={classes.icons2} src="/chat-svgrepo-com.svg" width={50} height={50} alt="chat" />
+                  <p>chat</p>
+                </a>
               </div>
-              <div>
-                <Image
-                  className={classes.icons2}
-                  src="/live-svgrepo-com.svg"
-                  width={50}
-                  height={50}
-                  alt="small icons"
-                />
+              <div onClick={() => alert("Live view is currently unavailable")} style={{ cursor: "pointer" }}>
+                <Image className={classes.icons2} src="/live-svgrepo-com.svg" width={50} height={50} alt="live view" />
                 <p>live view</p>
               </div>
-              <div>
-                <Image
-                  className={classes.icons2}
-                  src="/meeting-of-a-couple-of-men-svgrepo-com.svg"
-                  width={50}
-                  height={50}
-                  alt="small icons"
-                />
+              <div onClick={() => alert("Meeting link will be shared soon")} style={{ cursor: "pointer" }}>
+                <Image className={classes.icons2} src="/meeting-of-a-couple-of-men-svgrepo-com.svg" width={50} height={50} alt="meet" />
                 <p>meet</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h1 className={classes.seller}>About Seller</h1>
 
+      <h1 className={classes.seller}>About Seller</h1>
       <div className={classes.agent_card}>
         <div>
-          <Image
-            className={classes.agent_card_img}
-            src="/bikecarousel3.jpg"
-            width={1920}
-            height={1080}
-            alt="Agent Cover"
-          />
+          <Image className={classes.agent_card_img} src="/bikecarousel3.jpg" width={1920} height={1080} alt="Agent Cover" />
           <div className={classes.agent_card_overlay}></div>
           <div className={classes.agent_profile}>
-            <Image
-              className={classes.agent_card_profile}
-              src="/bikecarousel3.jpg"
-              width={500}
-              height={500}
-              alt="Agent Image"
-            />
+            <Image className={classes.agent_card_profile} src="/bikecarousel3.jpg" width={500} height={500} alt="Agent Profile" />
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Milind Palaria</h1>
+              <h1>ashish bhardwaj</h1>
               <div className={classes.agent_functions}>
                 <div>
-                  <Image
-                    className={classes.icons2}
-                    src="/call-phone-heart-svgrepo-com.svg"
-                    width={50}
-                    height={50}
-                    alt="Contact Image"
-                  />
-                  <p>call</p>
+                  <a href="tel:+918690585728" style={{ textDecoration: "none", color: "inherit" }}>
+                    <Image className={classes.icons2} src="/call-phone-heart-svgrepo-com.svg" width={50} height={50} alt="call" />
+                    <p>call</p>
+                  </a>
                 </div>
                 <div>
-                  <Image
-                    className={classes.icons2}
-                    src="/chat-svgrepo-com.svg"
-                    width={50}
-                    height={50}
-                    alt="Contact Image"
-                  />
-                  <p>chat</p>
+                  <a href="https://wa.me/918690585728" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+                    <Image className={classes.icons2} src="/chat-svgrepo-com.svg" width={50} height={50} alt="chat" />
+                    <p>chat</p>
+                  </a>
                 </div>
               </div>
             </div>
             <p>Direct owner / broker at sunseeker</p>
             <div>
-              <div>
-                <span>• </span>
-                <span>Location : </span>
-                <span>Chennai</span>
-              </div>
-              <div>
-                <span>• </span>
-                <span>Listings : </span>
-                <span>21</span>
-              </div>
-              <div>
-                <span>• </span>
-                <span>Sold : </span>
-                <span>5</span>
-              </div>
-              <div>
-                <span>• </span>
-                <span>Role : </span>
-                <span>Owner</span>
-              </div>
-              <div>
-                <span>• </span>
-                <span>Reviews : </span>
-                <span>19</span>
-              </div>
+              <div><span>• </span><span>Location : </span><span>Chennai</span></div>
+              <div><span>• </span><span>Listings : </span><span>21</span></div>
+              <div><span>• </span><span>Sold : </span><span>5</span></div>
+              <div><span>• </span><span>Role : </span><span>Owner</span></div>
+              <div><span>• </span><span>Reviews : </span><span>19</span></div>
             </div>
             <div className={classes.company_details}>
-              <Image
-                className={classes.company_logo}
-                src="/company.png"
-                width={200}
-                height={200}
-                alt="Company Logo"
-              />
+              <Image className={classes.company_logo} src="/company.png" width={200} height={200} alt="Company Logo" />
               <div>
                 <h2>Company Name</h2>
                 <p>direct owner / broker</p>

@@ -16,8 +16,10 @@ export default function appliances_ProductPage2({data}) {
   const datenow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
 
   const createData=async()=>{
-    await addDoc(orders,{ProductName:"Play Station 5", Seller:"Harsh Kanojia",price:1000,Time:showTime,Date:datenow})
-    // alert("Rented Successfully")
+    await addDoc(orders,{ProductName:"Play Station 5", Seller:"Ashish Bhardwaj",price:1000,Time:showTime,Date:datenow})
+    alert("Rented Successfully")
+    console.log("Rented")
+
   }
   // console.log(data);
   const router=useRouter();
@@ -28,7 +30,7 @@ export default function appliances_ProductPage2({data}) {
     <div>
       <div className={classes.first}>
         <h1>Play Station 5</h1>
-        <h3>~ Harsh Kanojia</h3>
+        <h3>~ Ashish Bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
             {/* <div className={classes.share_and_like}>
@@ -176,7 +178,7 @@ export default function appliances_ProductPage2({data}) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Harsh Kanojia</h1>
+              <h1>Ashish Bhardwaj</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image

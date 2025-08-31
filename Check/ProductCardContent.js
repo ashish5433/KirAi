@@ -108,9 +108,9 @@ const specifications = ["200HP |", " 2019 |", " 44km/l", " Electric"];
 // }
 
 const ProductCardContent = ({ data, view }) => {
-  // if (data.commonName === "bikeKanojia")
-  //   (data.commonName === "carKanojia")(data.commonName === "iotKanojia")(
-  //     data.commonName === "plotKanojia"
+  // if (data.commonName === "bikeBhardwaj")
+  //   (data.commonName === "carBhardwaj")(data.commonName === "iotBhardwaj")(
+  //     data.commonName === "plotBhardwaj"
   //   );
   return (
     <div>
@@ -125,21 +125,21 @@ const ProductCardContent = ({ data, view }) => {
           />
         </div>
         <div className="p-detailsdiv">
-          {data.commonName === "bikeKanojia" ? (
+          {data.commonName === "bikeBhardwaj" ? (
             <Link
               href={`/Products/bike_ProductPage2`}
               className="p-detailsdivlink"
             >
               <button className={play.className}>Rent Now</button>
             </Link>
-          ) : data.commonName === "carKanojia" ? (
+          ) : data.commonName === "carBhardwaj" ? (
             <Link
               href={`/Products/ProductPage2`}
               className="p-detailsdivlink"
             >
               <button className={play.className}>Rent Now</button>
             </Link>
-          ) : data.commonName === "iotKanojia" ? (
+          ) : data.commonName === "iotBhardwaj" ? (
             <Link
               href={`/Products/appliances_ProductPage2`}
               className="p-detailsdivlink"

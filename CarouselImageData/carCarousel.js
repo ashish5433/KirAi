@@ -7,31 +7,31 @@ const carCarousel = [
     Seller:"Ashish Bhardwaj",
     product:"Porsche 918 Spyder",
     price:"20,000 . 00",
-    commonName:"carKanojia"
+    commonName:"carBhardwaj"
   },
   {
     name: "Car Carousel Image 2",
     image: "/carcarousel2.jpg",
-    Seller:"Milind Palaria",
+    Seller:"ashish bhardwaj",
     product:"Ferrari SF90 Stradale",
     price:"22,000 . 00",
-    commonName:"carKanojia"
+    commonName:"carBhardwaj"
   },
   {
     name: "Car Carousel Image 3",
     image: "/carcarousel3.jpg",
-    Seller:"Rishav Kumar",
+    Seller:"Ashish",
     product:"Aston Martin Valkyrie",
     price:"16,200 . 00",
-    commonName:"carKanojia"
+    commonName:"carBhardwaj"
   },
   {
     name: "Car Carousel Image 4",
     image: "/carcarousel4.jpg",
-    Seller:"Harsh Kanojia",
+    Seller:"Ashish Bhardwaj",
     product:"Mercedes-AMG One",
     price:"15,500 . 00",
-    commonName:"carKanojia"
+    commonName:"carBhardwaj"
   },
   {
     name: "Car Carousel Image 5",
@@ -39,7 +39,7 @@ const carCarousel = [
     Seller:"Avinash Krishna",
     product:"Koenigsegg Jesko",
     price:"25,700 . 00",
-    commonName:"carKanojia"
+    commonName:"carBhardwaj"
   },
   {
     name: "Car Carousel Image 6",
@@ -47,7 +47,7 @@ const carCarousel = [
     Seller:"Rahul Kashyap",
     product:"Lotus Evija",
     price:"43,000 . 00",
-    commonName:"carKanojia"
+    commonName:"carBhardwaj"
   },
   {
     name: "Car Carousel Image 7",
@@ -55,7 +55,7 @@ const carCarousel = [
     Seller:"Adarsh Kumar",
     product:"Pininfarina Battista",
     price:"55,000 . 00",
-    commonName:"carKanojia"
+    commonName:"carBhardwaj"
   },
 ];
 

@@ -32,7 +32,7 @@ export default function appliances_ProductPage2({ data }) {
     } else {
       await setDoc(productRef, {
         productName: "Play Station 5",
-        productOwner: "Harsh Kanojia",
+        productOwner: "Ashish Bhardwaj",
         productPrice: 1000,
         quantity: 1,
       });
@@ -53,7 +53,7 @@ export default function appliances_ProductPage2({ data }) {
     <div>
       <div className={classes.first}>
         <h1>Play Station 5</h1>
-        <h3>~ Harsh Kanojia</h3>
+        <h3>~ Ashish Bhardwaj</h3>
         <div>
           <div className={classes.big_image_div}>
             <Image
@@ -190,7 +190,7 @@ export default function appliances_ProductPage2({ data }) {
           </div>
           <div className={classes.agent_detail}>
             <div className={classes.agent_name_and_functions}>
-              <h1>Harsh Kanojia</h1>
+              <h1>Ashish Bhardwaj</h1>
               <div className={classes.agent_functions}>
                 <div>
                   <Image
