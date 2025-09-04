@@ -14,7 +14,7 @@
 
 ## **"Rent Smart, Live Luxuriously."**
 
-Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace by integrating cutting-edge AI technology, offering a seamless and intelligent rental experience for accommodations, vehicles, and home appliances. Our platform provides full website navigation through AI voice commands, bringing convenience and luxury to your fingertips.
+Welcome to the Kir.AI repository! Kir.AI revolutionizes the rental marketplace, offering a seamless and intelligent rental experience for accommodations, vehicles, and home appliances. Our platform provides full website navigation through AI voice commands, bringing convenience and luxury to your fingertips.
 
 
 ## 📋 Table of Contents 📋
